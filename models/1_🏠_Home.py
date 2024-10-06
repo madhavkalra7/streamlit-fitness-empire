@@ -107,7 +107,7 @@ with st.container():
         )
 
     with right_column:
-        st.image("D:\\PBL-3\\WhatsApp Image 2024-10-03 at 21.02.55_623dc771.jpg", width=400, caption="NO PAIN NO GAIN")
+        st.image("models/images/rc.jpg", width=400, caption="NO PAIN NO GAIN")
 
 # ---- PROJECTS ----
 with st.container():
