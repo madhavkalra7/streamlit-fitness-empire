@@ -134,8 +134,8 @@ notebook_shim==0.2.4
 numpy==1.26.4
 oauthlib==3.2.2
 openai==1.38.0
-opencv-contrib-python==4.10.0.84
-opencv-python==4.9.0.80
+opencv-contrib-python
+opencv-python
 openpyxl==3.1.5
 opt-einsum==3.3.0
 overrides==7.7.0
