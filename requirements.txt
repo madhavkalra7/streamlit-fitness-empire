@@ -215,6 +215,7 @@ streamlit-lottie
 streamlit-toggle-switch==1.0.2
 streamlit-vertical-slider==2.5.5
 streamlit-webrtc==0.47.7
+streamlit-autorefresh
 sympy==1.13.1
 tenacity==8.5.0
 terminado==0.18.1
