@@ -139,7 +139,7 @@ member2_social_links = {
     "Email": "singh.manekas@example.com",  # Link for member 2
     "Phone": "+919876543211"  # Link for member 2
 }
-display_member("<h2>Manekas Singh</h2>", "Student", "D:\PBL-3\ms.jpg", member2_about_text, member2_social_links)  # Update the image path
+display_member("<h2>Manekas Singh</h2>", "Student", "models/images/ms.jpg", member2_about_text, member2_social_links)  # Update the image path
 
 # Add a loading animation
 with st.spinner('Loading...'):
