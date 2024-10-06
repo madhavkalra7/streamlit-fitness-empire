@@ -176,7 +176,6 @@ python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
 python-json-logger==2.0.7
 python-vlc==3.0.20123
-python3-openid==3.2.0
 pywin32==306
 pywinpty==2.0.13
 PyYAML==6.0.1
