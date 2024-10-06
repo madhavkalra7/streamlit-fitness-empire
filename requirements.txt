@@ -35,7 +35,6 @@ contourpy==1.2.1
 convogym==0.1.2
 cryptography==42.0.5
 cufflinks==0.17.3
-cv==1.0.0
 cv2
 cvzone==1.6.1
 cycler==0.12.1
