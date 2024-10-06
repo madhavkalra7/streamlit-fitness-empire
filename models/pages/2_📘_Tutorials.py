@@ -70,10 +70,10 @@ st.markdown(header_html, unsafe_allow_html=True)
 #     return r.json()
 
 # New
-img1 = Image.open("./images/dumbbell.webp")
-img2= Image.open("./images/squats.jpg")
-img3 = Image.open("./images/pushups.jpeg")
-img4 = Image.open("./images/shoulder.jpeg")
+img1 = Image.open("images/dumbbell.webp")
+img2= Image.open("images/squats.jpg")
+img3 = Image.open("images/pushups.jpeg")
+img4 = Image.open("images/shoulder.jpeg")
 
 
 app_mode = st.sidebar.selectbox("Choose the tutorial", ["About","Bicep Curls","Squats","Pushups","Shoulder press"])
