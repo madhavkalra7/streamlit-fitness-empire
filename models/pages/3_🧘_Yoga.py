@@ -22,7 +22,6 @@ import streamlit as st
 import mediapipe as mp
 import numpy as np
 from PIL import Image
-from playsound import playsound
 
 # ---- HEADER SECTION ----
 css_styles = """
@@ -96,7 +95,6 @@ def count_time(time_interval):
         if counter == time_interval + 1:
             counter = 0
             pose_number += 1
-            playsound(r'E:\AI Fitness Trainer\models\bell.wav')
             if pose_number == 5:
                 pose_number = 1
     return counter, pose_number
