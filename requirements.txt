@@ -38,7 +38,7 @@ cufflinks==0.17.3
 cv==1.0.0
 cvzone==1.6.1
 cycler==0.12.1
-debugpy==1.8.3
+debugpy>=1.0.0
 decorator==5.1.1
 decouple==0.0.7
 defusedxml==0.7.1
@@ -224,7 +224,7 @@ sqlparse==0.4.1
 st-annotated-text==4.0.1
 st-theme==1.2.3
 stack-data==0.6.3
-streamlit==1.37.0
+streamlit
 streamlit-camera-input-live==0.2.0
 streamlit-card==1.0.2
 streamlit-embedcode==0.1.2
@@ -232,7 +232,7 @@ streamlit-extras==0.4.3
 streamlit-faker==0.0.3
 streamlit-image-coordinates==0.1.9
 streamlit-keyup==0.2.4
-streamlit-lottie==0.0.5
+streamlit-lottie
 streamlit-toggle-switch==1.0.2
 streamlit-vertical-slider==2.5.5
 streamlit-webrtc==0.47.7
