@@ -21,7 +21,7 @@ def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-local_css("D:\\Downloads\\AI-Fitness-Trainer-main\\AI-Fitness-Trainer-main\\models\\styles\\styles.css")
+local_css("models\styles\styles.css")
 
 # Load Lottie animations
 music = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_ikk4jhps.json")
