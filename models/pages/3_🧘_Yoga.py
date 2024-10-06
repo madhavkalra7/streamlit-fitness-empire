@@ -370,10 +370,7 @@ elif app_mode == "Track 2":
     
     while start and not stop:
         ret, frame = cap.read()
-        if frame is None:
-            st.error("Failed to capture video frame. Please check your camera or video file.")
-        else:
-            image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         results = pose.process(image)
         image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
         image = cv2.resize(image,(800,600))
