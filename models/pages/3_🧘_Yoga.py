@@ -104,13 +104,13 @@ last_second = 0
 counter = 0
 pose_number = 1
 
-img1 = Image.open(r"D:\Downloads\AI-Fitness-Trainer-main\AI-Fitness-Trainer-main\models\gif\yoga.gif")
-img2 = Image.open(r"D:\Downloads\AI-Fitness-Trainer-main\AI-Fitness-Trainer-main\models\images\pranamasana2.png")
-img3 = Image.open(r"D:\Downloads\AI-Fitness-Trainer-main\AI-Fitness-Trainer-main\models\images\Eka_Pada_Pranamasana.png")
-img4 = Image.open(r"D:\Downloads\AI-Fitness-Trainer-main\AI-Fitness-Trainer-main\models\images\Ashwa_Sanchalanasana.webp")
-img5 = Image.open(r"D:\Downloads\AI-Fitness-Trainer-main\AI-Fitness-Trainer-main\models\images\ardha_chakrasana.webp")
-img6 = Image.open(r"D:\Downloads\AI-Fitness-Trainer-main\AI-Fitness-Trainer-main\models\images\Utkatasana.png")
-img7 = Image.open(r"D:\Downloads\AI-Fitness-Trainer-main\AI-Fitness-Trainer-main\models\images\Veerabhadrasan_2.png")
+img1 = Image.open("models\gif\yoga.gif")
+img2 = Image.open("models\images\pranamasana2.png")
+img3 = Image.open("models\images\Eka_Pada_Pranamasana.png")
+img4 = Image.open("models\images\Ashwa_Sanchalanasana.webp")
+img5 = Image.open("models\images\ardha_chakrasana.webp")
+img6 = Image.open("models\images\Utkatasana.png")
+img7 = Image.open("models\images\Veerabhadrasan_2.png")
 
 
 mp_drawing = mp.solutions.drawing_utils
