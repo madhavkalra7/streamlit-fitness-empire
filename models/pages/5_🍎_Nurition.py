@@ -68,7 +68,7 @@ st.markdown('<div class="content-container"></div>', unsafe_allow_html=True)
 st.write("")
 
 # Load dataset
-df = pd.read_csv("models/food1.csv", encoding='mac_roman')
+df = pd.read_csv("./food1.csv", encoding='mac_roman')
 
 ye = st.number_input('Enter Number of dishes', min_value=1, max_value=10)
 i = 0
@@ -126,20 +126,13 @@ try:
         else:
             st.write(f"Food item '{sel}' not found in the dataset.")
         
-        # # Comparison with daily recommended values (RDV)
+        # Comparison with daily recommended values (RDV)
         rdv_calories = 2000  # Modify these values based on the user's needs
         # rdv_protein = 50  # grams
         # rdv_carbs = 300  # grams
         # rdv_fat = 70  # grams
 
-        # fig_rdv = go.Figure(go.Indicator(
-        #     mode="gauge+number",
-        #     value=calories,
-        #     title={'text': "Total Calories vs RDV"},
-        #     gauge={'axis': {'range': [0, rdv_calories]}}
-        # ))
-        # st.plotly_chart(fig_rdv)
-        # **Stylish Gauge Chart** for RDV comparison
+        # Stylish Gauge Chart for RDV comparison
         fig_rdv = go.Figure(go.Indicator(
             mode="gauge+number+delta",
             value=calories,
@@ -182,19 +175,67 @@ try:
     ])
     fig_macronutrient.update_layout(barmode='stack', title="Macronutrient Distribution per Food")
     st.plotly_chart(fig_macronutrient)
+    
+    # Radar chart data preparation
+    categories = ['Proteins', 'Carbs', 'Fats', 'Sugar']
+    values = [np.sum(list3), np.sum(list4), np.sum(list5), np.sum(list7)]
 
-    # Time-series calorie tracking
-    st.write("Calorie Intake Over Time")
-    time_data = pd.DataFrame({
-        'Date': pd.date_range(start='2024-10-01', periods=len(list2)),
-        'Calories': list2
+    # Add zero values for categories that may not be selected
+    if len(values) < len(categories):
+        values += [0] * (len(categories) - len(values))
+        
+    fig_radar = go.Figure()
+
+    fig_radar.add_trace(go.Scatterpolar(
+        r=values + [values[0]],  # Close the loop
+        theta=categories + [categories[0]],  # Close the loop
+        fill='toself',
+        name='Nutritional Breakdown',
+        marker=dict(color='#9C0000')
+    ))
+
+    fig_radar.update_layout(
+        title='Nutritional Breakdown Radar Chart',
+        polar=dict(
+            radialaxis=dict(
+                visible=True,
+                range=[0, max(values) + 10]  # Adjust based on your values
+            )
+        ),
+        showlegend=True
+    )
+
+    st.plotly_chart(fig_radar)
+
+    # Macronutrient data (Example)
+    macronutrient_data = pd.DataFrame({
+        'Food': list1,
+        'Proteins': list3,
+        'Carbs': list4,
+        'Fats': list5,
+        'Sugar': list7,
+        'Calcium': list8
     })
 
-    fig_time_series = go.Figure()
-    fig_time_series.add_trace(go.Scatter(x=time_data['Date'], y=time_data['Calories'], mode='lines+markers', name='Calories'))
-    fig_time_series.update_layout(title="Calorie Intake Over Time")
-    st.plotly_chart(fig_time_series)
+    # Create the heatmap
+    fig_heatmap = go.Figure(
+        data=go.Heatmap(
+            z=macronutrient_data[['Proteins', 'Carbs', 'Fats', 'Sugar', 'Calcium']].T,
+            x=macronutrient_data['Food'],
+            y=['Proteins', 'Carbs', 'Fats', 'Sugar', 'Calcium'],
+            colorscale='Viridis'
+        )
+    )
 
+    # Customize the layout
+    fig_heatmap.update_layout(
+        title="Macronutrient Concentration Heatmap",
+        xaxis_title="Food Items",
+        yaxis_title="Nutrient Types"
+    )
+
+    # Display the heatmap
+    st.plotly_chart(fig_heatmap)
     # Pie charts for nutrient breakdown
     with col1:
         fig = go.Figure(data=[go.Pie(labels=list1, values=list2, textinfo='percent', insidetextorientation='radial')])
