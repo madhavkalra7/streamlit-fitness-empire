@@ -124,7 +124,7 @@ display_member("<h2>Madhav Kalra</h2>", "Student", "D:\\Downloads\\1684128589626
 # Member 2 (Madhav Goyal)
 member1_about_text = "Hello! I'm Madhav Goyal, a passionate learner in tech."  # Unique about text for member 1
 member1_social_links = {
-    "Instagram": "https://www.instagram.com/madhavgoyal",  # Link for member 1
+    "Instagram": "https://www.instagram.com/madhavgoyal._",  # Link for member 1
     "LinkedIn": "https://www.linkedin.com/in/madhav-goyal",  # Link for member 1
     "Email": "goyal.madhav@example.com",  # Link for member 1
     "Phone": "+919876543210"  # Link for member 1
@@ -139,7 +139,7 @@ member2_social_links = {
     "Email": "singh.manekas@example.com",  # Link for member 2
     "Phone": "+919876543211"  # Link for member 2
 }
-display_member("<h2>Manekas Singh</h2>", "Student", "models/images/ms.jpg", member2_about_text, member2_social_links)  # Update the image path
+display_member("<h2>Manekas Singh</h2>", "Student", "D:\PBL-3\ms.jpg", member2_about_text, member2_social_links)  # Update the image path
 
 # Add a loading animation
 with st.spinner('Loading...'):
