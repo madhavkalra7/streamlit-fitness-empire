@@ -119,7 +119,7 @@ your_social_links = {
     "Email": "madhavkalra2005@gmail.com",  # Your email address
     "Phone": "+919813569096"  # Your phone number
 }
-display_member("<h2>Madhav Kalra</h2>", "Student", "D:\\Downloads\\1684128589626.jpg", your_about_text, your_social_links)  # Update the image path
+display_member("<h2>Madhav Kalra</h2>", "Student", "models/images/mk.jpg", your_about_text, your_social_links)  # Update the image path
 
 # Member 2 (Madhav Goyal)
 member1_about_text = "Hello! I'm Madhav Goyal, a passionate learner in tech."  # Unique about text for member 1
@@ -129,7 +129,7 @@ member1_social_links = {
     "Email": "goyal.madhav@example.com",  # Link for member 1
     "Phone": "+919876543210"  # Link for member 1
 }
-display_member("<h2>Madhav Goyal</h2>", "Student", "D:\PBL-3\mg.jpg", member1_about_text, member1_social_links)  # Update the image path
+display_member("<h2>Madhav Goyal</h2>", "Student", "models/images/mg.jpg", member1_about_text, member1_social_links)  # Update the image path
 
 # Member 3 (Manekas Singh)
 member2_about_text = "Hi, I'm Manekas Singh, eager to innovate and explore."  # Unique about text for member 2
@@ -139,7 +139,7 @@ member2_social_links = {
     "Email": "singh.manekas@example.com",  # Link for member 2
     "Phone": "+919876543211"  # Link for member 2
 }
-display_member("<h2>Manekas Singh</h2>", "Student", "D:\PBL-3\ms.jpg", member2_about_text, member2_social_links)  # Update the image path
+display_member("<h2>Manekas Singh</h2>", "Student", "models/images/ms.jpg", member2_about_text, member2_social_links)  # Update the image path
 
 # Add a loading animation
 with st.spinner('Loading...'):
