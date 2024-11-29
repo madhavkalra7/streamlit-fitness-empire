@@ -6,7 +6,7 @@ import numpy as np
 import plotly.graph_objects as go
 import logging
 
-st.set_page_config(page_title="Train", page_icon="D:\PBL-3\FE.png", layout="wide")
+st.set_page_config(page_title="Train", page_icon="models/images/FE.png", layout="wide")
 
 # Set up logging
 logging.basicConfig(level=logging.DEBUG)
@@ -97,7 +97,7 @@ def about_page():
         """)
 
     with col2:
-        st.image('./gif/ham.gif')
+        st.image('models/gif/ham.gif')
 
 def exercise_page(exercise):
     st.markdown(f"## {exercise}")
