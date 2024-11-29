@@ -92,7 +92,7 @@ pose_number = 1
 
 img1 = Image.open("models/gif/yoga.gif")
 img2 = Image.open("models/images/pranamasana2.png")
-img3 = Image.open("models/image/Eka_Pada_Pranamasana.png")
+img3 = Image.open("models/images/Eka_Pada_Pranamasana.png")
 img4 = Image.open("models/images/Ashwa_Sanchalanasana.webp")
 img5 = Image.open("models/images/ardha_chakrasana.webp")
 img6 = Image.open("models/images/Utkatasana.png")
