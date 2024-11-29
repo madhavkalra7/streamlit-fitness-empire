@@ -4,30 +4,25 @@ from streamlit_lottie import st_lottie
 from PIL import Image
 from streamlit_autorefresh import st_autorefresh
 
-st.set_page_config(page_title="Fitness Trainer", page_icon=":tada:", layout="wide")
+st.set_page_config(page_title="Fitness Trainer", page_icon="D:\PBL-3\FE.png", layout="wide")
 
-# Refresh the page every 2000 milliseconds (2 seconds)
 count = st_autorefresh(interval=2000, limit=100, key="fizzbuzzcounter")
 
-# Function to load Lottie animations
 def load_lottieurl(url):
     r = requests.get(url)
     if r.status_code != 200:
         return None
     return r.json()
 
-# Load local CSS
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-local_css("models/styles/styles.css")
+local_css("D:\\Downloads\\AI-Fitness-Trainer-main\\AI-Fitness-Trainer-main\\models\\styles\\styles.css")
 
-# Load Lottie animations
 music = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_ikk4jhps.json")
 podcast = load_lottieurl("https://assets8.lottiefiles.com/packages/lf20_JjpNLdaKYX.json")
 
-# ---- HEADER SECTION ----
 css_styles = """
     <style>
     .header-container {
@@ -74,10 +69,8 @@ header_html = """
     </div>
 """
 
-# Display the animated header
 st.markdown(header_html, unsafe_allow_html=True)
 
-# Set scroll position on page load
 scroll_js = """
 <script>
     window.onload = function() {
@@ -88,7 +81,7 @@ scroll_js = """
 
 st.markdown(scroll_js, unsafe_allow_html=True)
 
-# ---- WHAT I DO ----
+
 with st.container():
     st.write("---")
     st.write("## About us")
@@ -107,7 +100,7 @@ with st.container():
         )
 
     with right_column:
-        st.image("models/images/rc.jpg", width=400, caption="NO PAIN NO GAIN")
+        st.image("D:\\PBL-3\\rc.jpg", width=400, caption="NO PAIN NO GAIN")
 
 # ---- PROJECTS ----
 with st.container():
@@ -148,7 +141,7 @@ with st.container():
     st.write("##")
 
     contact_form = """
-    <form action="https://formsubmit.co/c722428e42528bf09a0c149f6b7d3909" method="POST">
+    <form action="https://formsubmit.co/madhavkalra2005@gmail.com" method="POST">
         <input type="hidden" name="_captcha" value="false">
         <input type="text" name="name" placeholder="Your name" required>
         <input type="email" name="email" placeholder="Your email" required>
