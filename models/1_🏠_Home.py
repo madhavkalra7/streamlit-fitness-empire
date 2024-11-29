@@ -4,7 +4,7 @@ from streamlit_lottie import st_lottie
 from PIL import Image
 from streamlit_autorefresh import st_autorefresh
 
-st.set_page_config(page_title="Fitness Trainer", page_icon="D:\PBL-3\FE.png", layout="wide")
+st.set_page_config(page_title="Fitness Trainer", page_icon="C:/Users/hp/Desktop/AI-Fitness-Trainer-main/AI-Fitness-Trainer-main/models/images/FE.png", layout="wide")
 
 count = st_autorefresh(interval=2000, limit=100, key="fizzbuzzcounter")
 
@@ -100,7 +100,7 @@ with st.container():
         )
 
     with right_column:
-        st.image("D:\\PBL-3\\rc.jpg", width=400, caption="NO PAIN NO GAIN")
+        st.image("C:/Users/hp/Desktop/AI-Fitness-Trainer-main/AI-Fitness-Trainer-main/models/images/rc.jpg", width=400, caption="NO PAIN NO GAIN")
 
 # ---- PROJECTS ----
 with st.container():
