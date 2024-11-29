@@ -1,19 +1,3 @@
-# import cv2
-# import streamlit as st
-
-# st.title("Webcam Live Feed")
-# start = st.button('Start')
-# stop = st.button('Stop')
-# FRAME_WINDOW = st.image([])
-# camera = cv2.VideoCapture(0)
-
-# while start and not stop:
-#     _, frame = camera.read()
-#     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-#     FRAME_WINDOW.image(frame)
-#     if stop:
-#         break
-
 import datetime
 import os
 import time
@@ -22,8 +6,10 @@ import streamlit as st
 import mediapipe as mp
 import numpy as np
 from PIL import Image
+from playsound import playsound
 
-# ---- HEADER SECTION ----
+st.set_page_config(page_title="Yoga", page_icon="D:\PBL-3\FE.png", layout="wide")
+
 css_styles = """
     <style>
     .header-container {
@@ -83,7 +69,7 @@ st.markdown('<div class="content-container"></div>', unsafe_allow_html=True)
 def calculate_angle(a, b, c):
     radians = np.arctan2(c[1]-b[1], c[0]-b[0]) - np.arctan2(a[1]-b[1], a[0]-b[0])
     angle = np.abs(radians * 180.0 / np.pi)
-    return angle   
+    return angle
 
 def count_time(time_interval):
     global last_second, counter, pose_number
@@ -104,13 +90,13 @@ last_second = 0
 counter = 0
 pose_number = 1
 
-img1 = Image.open("models/gif/yoga.gif")
-img2 = Image.open("models/images/pranamasana2.png")
-img3 = Image.open("models/images/Eka_Pada_Pranamasana.png")
-img4 = Image.open("models/images/Ashwa_Sanchalanasana.webp")
-img5 = Image.open("models/images/ardha_chakrasana.webp")
-img6 = Image.open("models/images/Utkatasana.png")
-img7 = Image.open("models/images/Veerabhadrasan_2.png")
+img1 = Image.open(r"D:\Downloads\AI-Fitness-Trainer-main\AI-Fitness-Trainer-main\models\gif\yoga.gif")
+img2 = Image.open(r"D:\Downloads\AI-Fitness-Trainer-main\AI-Fitness-Trainer-main\models\images\pranamasana2.png")
+img3 = Image.open(r"D:\Downloads\AI-Fitness-Trainer-main\AI-Fitness-Trainer-main\models\images\Eka_Pada_Pranamasana.png")
+img4 = Image.open(r"D:\Downloads\AI-Fitness-Trainer-main\AI-Fitness-Trainer-main\models\images\Ashwa_Sanchalanasana.webp")
+img5 = Image.open(r"D:\Downloads\AI-Fitness-Trainer-main\AI-Fitness-Trainer-main\models\images\ardha_chakrasana.webp")
+img6 = Image.open(r"D:\Downloads\AI-Fitness-Trainer-main\AI-Fitness-Trainer-main\models\images\Utkatasana.png")
+img7 = Image.open(r"D:\Downloads\AI-Fitness-Trainer-main\AI-Fitness-Trainer-main\models\images\Veerabhadrasan_2.png")
 
 
 mp_drawing = mp.solutions.drawing_utils
