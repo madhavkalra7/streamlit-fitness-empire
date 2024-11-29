@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 from streamlit_extras.no_default_selectbox import selectbox
 import matplotlib.pyplot as plt
 
-st.set_page_config(page_title="Nutrition Data Analysis", page_icon="D:\PBL-3\FE.png", layout="wide")
+st.set_page_config(page_title="Nutrition Data Analysis", page_icon="models/images/FE.png", layout="wide")
 
 css_styles = """
     <style>
