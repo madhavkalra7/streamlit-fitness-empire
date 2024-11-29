@@ -2,13 +2,11 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
-# from pydataset import data
 from streamlit_extras.no_default_selectbox import selectbox
 import matplotlib.pyplot as plt
 
-st.set_page_config(page_title='Nutrition Calorie Tracker', layout='wide')
+st.set_page_config(page_title="Nutrition Data Analysis", page_icon="D:\PBL-3\FE.png", layout="wide")
 
-# ---- HEADER SECTION ----
 css_styles = """
     <style>
     .header-container {
@@ -51,10 +49,8 @@ css_styles = """
     </style>
 """
 
-# Apply the CSS styles
 st.markdown(css_styles, unsafe_allow_html=True)
 
-# Header for the Nutrition page
 header_html = """
     <div class="header-container">
         <h1>Nutrition</h1>
@@ -63,12 +59,11 @@ header_html = """
 """
 st.markdown(header_html, unsafe_allow_html=True)
 
-# ---- SPACE ADJUSTMENT FOR CONTENT ----
 st.markdown('<div class="content-container"></div>', unsafe_allow_html=True)
 st.write("")
 
 # Load dataset
-df = pd.read_csv("models/food1.csv", encoding='mac_roman')
+df = pd.read_csv("./food1.csv", encoding='mac_roman')
 
 ye = st.number_input('Enter Number of dishes', min_value=1, max_value=10)
 i = 0
