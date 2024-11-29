@@ -63,7 +63,7 @@ st.markdown('<div class="content-container"></div>', unsafe_allow_html=True)
 st.write("")
 
 # Load dataset
-df = pd.read_csv("./food1.csv", encoding='mac_roman')
+df = pd.read_csv("models/food1.csv", encoding='mac_roman')
 
 ye = st.number_input('Enter Number of dishes', min_value=1, max_value=10)
 i = 0
