@@ -1,6 +1,7 @@
 import streamlit as st
 
-# ---- HEADER SECTION ----
+st.set_page_config(page_title="Fitness Empire's Bot", page_icon="D:\PBL-3\FE.png", layout="wide")
+
 css_styles = """
     <style>
     .header-container {
