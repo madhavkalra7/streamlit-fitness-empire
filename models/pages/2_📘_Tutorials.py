@@ -1,12 +1,12 @@
 import streamlit as st
 import json
-
 import requests  
 import streamlit as st  
 from streamlit_lottie import st_lottie  
 from PIL import Image
 
-# ---- HEADER SECTION ----
+st.set_page_config(page_title="Tutorials", page_icon="D:\PBL-3\FE.png", layout="wide")
+
 css_styles = """
     <style>
     .header-container {
@@ -44,10 +44,8 @@ css_styles = """
     </style>
 """
 
-# Apply the CSS styles
 st.markdown(css_styles, unsafe_allow_html=True)
 
-# Header for the Tutorial page
 header_html = """
     <div class="header-container">
         <h1>Tutorial</h1>
@@ -56,29 +54,13 @@ header_html = """
 """
 st.markdown(header_html, unsafe_allow_html=True)
 
-# html = """
-# <div style="background-color:#025246 ;padding:10px">
-# <h2 style="color:white;text-align:center;">Tutorial</h2>
-# </div>"""
-# st.markdown(html, unsafe_allow_html=True)
-
-
-# def load_lottieurl(url: str):
-#     r = requests.get(url)
-#     if r.status_code != 200:
-#         return None
-#     return r.json()
-
-# New
-img1 = Image.open("models/images/dumbbell.webp")
-img2= Image.open("models/images/squats.jpg")
-img3 = Image.open("models/images/pushups.jpeg")
-img4 = Image.open("models/images/shoulder.jpeg")
-
+img1 = Image.open("./images/dumbbell.webp")
+img2= Image.open("./images/squats.jpg")
+img3 = Image.open("./images/pushups.jpeg")
+img4 = Image.open("./images/shoulder.jpeg")
 
 app_mode = st.sidebar.selectbox("Choose the tutorial", ["About","Bicep Curls","Squats","Pushups","Shoulder press"])
 if app_mode == "About":
-    #st_lottie(lottie_hello,key="hello")
     
     with st.container():
         st.write("---")
@@ -96,7 +78,6 @@ if app_mode == "About":
             )
             st.markdown("[Watch Video...](https://youtu.be/ykJmrZ5v0Oo)")
     
-        
     with st.container():
         image_column, text_column = st.columns((1, 2))
     with image_column:
@@ -160,12 +141,9 @@ elif app_mode == "Bicep Curls":
     with col2:
         st.image("./gif/bicep.gif")
 
-
-
 elif app_mode == "Squats":
     st.markdown("## Squats")
     st.markdown("Here's a step-by-step tutorial for performing Squats:")
-    
     col1, col2 = st.columns(2)
     st.write("##")
     with col1:
