@@ -4,7 +4,7 @@ from streamlit_lottie import st_lottie
 from PIL import Image
 from streamlit_autorefresh import st_autorefresh
 
-st.set_page_config(page_title="Fitness Trainer", page_icon="C:/Users/hp/Desktop/AI-Fitness-Trainer-main/AI-Fitness-Trainer-main/models/images/FE.png", layout="wide")
+st.set_page_config(page_title="Fitness Trainer", page_icon="models/images/FE.png", layout="wide")
 
 count = st_autorefresh(interval=2000, limit=100, key="fizzbuzzcounter")
 
@@ -18,7 +18,7 @@ def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-local_css("D:\\Downloads\\AI-Fitness-Trainer-main\\AI-Fitness-Trainer-main\\models\\styles\\styles.css")
+local_css("models/styles/styles.css")
 
 music = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_ikk4jhps.json")
 podcast = load_lottieurl("https://assets8.lottiefiles.com/packages/lf20_JjpNLdaKYX.json")
@@ -100,7 +100,7 @@ with st.container():
         )
 
     with right_column:
-        st.image("C:/Users/hp/Desktop/AI-Fitness-Trainer-main/AI-Fitness-Trainer-main/models/images/rc.jpg", width=400, caption="NO PAIN NO GAIN")
+        st.image("models/images/rc.jpg", width=400, caption="NO PAIN NO GAIN")
 
 # ---- PROJECTS ----
 with st.container():
