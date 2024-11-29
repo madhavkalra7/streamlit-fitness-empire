@@ -5,7 +5,7 @@ import streamlit as st
 from streamlit_lottie import st_lottie  
 from PIL import Image
 
-st.set_page_config(page_title="Tutorials", page_icon="D:\PBL-3\FE.png", layout="wide")
+st.set_page_config(page_title="Tutorials", page_icon="models/images/FE.png", layout="wide")
 
 css_styles = """
     <style>
@@ -54,10 +54,10 @@ header_html = """
 """
 st.markdown(header_html, unsafe_allow_html=True)
 
-img1 = Image.open("./images/dumbbell.webp")
-img2= Image.open("./images/squats.jpg")
-img3 = Image.open("./images/pushups.jpeg")
-img4 = Image.open("./images/shoulder.jpeg")
+img1 = Image.open("models/images/dumbbell.webp")
+img2= Image.open("models/images/squats.jpg")
+img3 = Image.open("models/images/pushups.jpeg")
+img4 = Image.open("models/images/shoulder.jpeg")
 
 app_mode = st.sidebar.selectbox("Choose the tutorial", ["About","Bicep Curls","Squats","Pushups","Shoulder press"])
 if app_mode == "About":
@@ -139,7 +139,7 @@ elif app_mode == "Bicep Curls":
         Remember, it's important to use appropriate weight for your fitness level and gradually increase the resistance as you get stronger.    
         """)
     with col2:
-        st.image("./gif/bicep.gif")
+        st.image("models/gif/bicep.gif")
 
 elif app_mode == "Squats":
     st.markdown("## Squats")
@@ -169,7 +169,7 @@ elif app_mode == "Squats":
         Remember, it's important to listen to your body and start with a weight or intensity level that is appropriate for your fitness level. Gradually progress as you gain strength and confidence in your squatting technique.   
         """)
     with col2:
-        st.image("./gif/squats.gif")
+        st.image("models/gif/squats.gif")
 
 elif app_mode == "Pushups":
     st.markdown("## Pushups")
@@ -189,7 +189,7 @@ elif app_mode == "Pushups":
    
         """)
     with col2:
-        st.image("./gif/pushups.gif")
+        st.image("models/gif/pushups.gif")
 
 elif app_mode == "Shoulder press":
     st.markdown("## Shoulder press")
@@ -209,4 +209,4 @@ elif app_mode == "Shoulder press":
    
         """)
     with col2:
-        st.image("./gif/shoulder.gif")
+        st.image("models/gif/shoulder.gif")
