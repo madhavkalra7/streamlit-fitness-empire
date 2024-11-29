@@ -1,7 +1,7 @@
 import streamlit as st
 import base64
 
-st.set_page_config(page_title="Dashboards",page_icon="D:\PBL-3\FE.png",layout="wide")
+st.set_page_config(page_title="Dashboards",page_icon="models/images/FE.png",layout="wide")
 
 css_styles = """
 <style>
@@ -83,13 +83,13 @@ def get_image_base64(image_path):
         return base64.b64encode(img_file.read()).decode()
 
 image_paths = [
-    "C:/Users/hp/Desktop/AI-Fitness-Trainer-main/AI-Fitness-Trainer-main/models/images/dashboard1.jpg",
-    "C:/Users/hp/Desktop/AI-Fitness-Trainer-main/AI-Fitness-Trainer-main/models/images/dashboard2.jpg",
-    "C:/Users/hp/Desktop/AI-Fitness-Trainer-main/AI-Fitness-Trainer-main/models/images/dashboard3.jpg",
-    "C:/Users/hp/Desktop/AI-Fitness-Trainer-main/AI-Fitness-Trainer-main/models/images/dashboard4.jpg",
-    "C:/Users/hp/Desktop/AI-Fitness-Trainer-main/AI-Fitness-Trainer-main/models/images/dashboard5.jpg",
-    "C:/Users/hp/Desktop/AI-Fitness-Trainer-main/AI-Fitness-Trainer-main/models/images/dashboard6.jpg",
-    "C:/Users/hp/Desktop/AI-Fitness-Trainer-main/AI-Fitness-Trainer-main/models/images/dashboard7.jpg",
+    "models/images/dashboard1.jpg",
+    "models/images/dashboard2.jpg",
+    "models/images/dashboard3.jpg",
+    "models/images/dashboard4.jpg",
+    "models/images/dashboard5.jpg",
+    "models/images/dashboard6.jpg",
+    "models/images/dashboard7.jpg",
 ]
 
 for image_path in image_paths:
